@@ -1,7 +1,7 @@
 ---
 title: "Meet the toolkit:<br>programming"
-subtitle: "<br><br> ENST 321: Environmental Data Science"
-author: "[https://enst321-2022sp.netlify.app/](https://enst321-2022sp.netlify.app/)"
+subtitle: "<br><br> ENST 320: Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app/)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
@@ -27,17 +27,8 @@ library(lubridate)
 
 <br>
 
+
 .pull-left[
-### .gray[Course operation]
-.gray[
-- introds.org
-- Learn
-- Zoom
-- Teams
-- Piazza
-]
-]
-.pull-right[
 ### .pink[Doing data science]
 - .pink[Programming:]
   - .pink[R]
@@ -284,7 +275,7 @@ x * 3
 ]
 
 .question[
-All looks good, eh?
+All looks good?
 ]
 ]
 

@@ -58,7 +58,7 @@ layout: true
   
 <div class="my-footer">
 <span>
-<a href="https://enst321-2022sp.netlify.app" target="_blank">ENST 321: Environmental Data Science</a>
+<a href="https://enst320-2022sp.netlify.app" target="_blank">ENST 320: Environmental Data Science</a>
 </span>
 </div> 
 
