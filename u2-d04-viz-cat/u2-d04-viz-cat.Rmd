@@ -1,7 +1,7 @@
 ---
 title: "Visualising categorical data"
-subtitle: "<br><br> Data Science in a Box"
-author: "[datasciencebox.org](https://datasciencebox.org/)"
+subtitle: "<br><br> ENST 320: Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app/)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
@@ -134,7 +134,7 @@ class: middle
 
 ## Already talked about...
 
-- Colouring and faceting histograms and density plots
+- Coloring and faceting histograms and density plots
 - Side-by-side box plots
 
 ---
@@ -154,6 +154,40 @@ ggplot(loans, aes(x = homeownership, y = loan_amount)) +
 library(ggridges)
 ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) + 
   geom_density_ridges(alpha = 0.5)
+```
+
+---
+
+## Bar plots with numeric and categorical data
+The starwars dataset illustrates this better.
+This is useful when you have one observation per categorical variable, or if you have calculated a summary statistic for each level of a categorical variable.
+Use `stat = "identity"` in the `geom_bar()` function
+```{r}
+ggplot(starwars[1:10,] , aes(x = name, y = height)) +
+  geom_bar(stat = "identity")
+```
+
+---
+
+## Bar plots with numeric and categorical data
+Not very pretty - plot name on the y-axis
+```{r}
+ggplot(starwars[1:40,], aes(x = height, y = name)) +
+  geom_bar(stat = "identity")
+```
+
+---
+
+## Bar plots with numeric and categorical data
+Not very pretty - reorder name by height. And let's color the bars by homeworld, make the labels nicer, and use a nicer theme while we're at it.
+```{r}
+ggplot(starwars[1:40,], aes(x = height, y = reorder(name, height), fill = homeworld)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Height (cm)", 
+       y = "", 
+       fill = "Homeworld", 
+       title = "Starwars character height and homeworld") +
+  theme_minimal()
 ```
 
 ---
