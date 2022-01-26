@@ -1,7 +1,7 @@
 ---
 title: "Visualising numerical data"
-subtitle: "<br><br> Data Science in a Box"
-author: "[datasciencebox.org](https://datasciencebox.org/)"
+subtitle: "<br><br> ENSt 320: Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app/)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
@@ -19,6 +19,7 @@ output:
 ```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(openintro)
+library(hexbin)
 loans_full_schema <- loans_full_schema %>%
   mutate(grade = factor(grade, ordered = TRUE))
 ```
