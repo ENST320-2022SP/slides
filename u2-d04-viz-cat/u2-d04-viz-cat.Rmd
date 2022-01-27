@@ -158,36 +158,59 @@ ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) +
 
 ---
 
-## Bar plots with numeric and categorical data
-The starwars dataset illustrates this better.
-This is useful when you have one observation per categorical variable, or if you have calculated a summary statistic for each level of a categorical variable.
-Use `stat = "identity"` in the `geom_bar()` function
-```{r}
-ggplot(starwars[1:10,] , aes(x = name, y = height)) +
-  geom_bar(stat = "identity")
+## Use use `stat = "identity"` to plot values instead of counts
+
+.panelset[
+.panel[.panel-name[Plot]
+```{r ref.label = "bar-identity", echo = FALSE, warning = FALSE}
 ```
+]
+.panel[.panel-name[Code]
+```{r bar-identity, fig.show = "hide", warning = FALSE}
+ggplot(starwars[1:20,], aes(x = name, y = height)) +
+  geom_bar(stat = "identity") #<<
+```
+]
+]
 
 ---
 
-## Bar plots with numeric and categorical data
-Not very pretty - plot name on the y-axis
-```{r}
-ggplot(starwars[1:40,], aes(x = height, y = name)) +
+## Plot `name` on the y-axis for better viz
+.panelset[
+.panel[.panel-name[Plot]
+```{r ref.label = "bar-identity-rotate", echo = FALSE, warning = FALSE}
+```
+]
+.panel[.panel-name[Code]
+```{r bar-identity-rotate, fig.show = "hide", warning = FALSE}
+ggplot(starwars[1:20,], 
+       aes(x = height, 
+           y = name)) + #<<
   geom_bar(stat = "identity")
 ```
+]
+]
 
 ---
 
-## Bar plots with numeric and categorical data
-Not very pretty - reorder name by height. And let's color the bars by homeworld, make the labels nicer, and use a nicer theme while we're at it.
-```{r}
-ggplot(starwars[1:40,], aes(x = height, y = reorder(name, height), fill = homeworld)) +
+### Reorder `name` by `height` for even better viz (and clean up labels and theme)
+.panelset[
+.panel[.panel-name[Plot]
+```{r ref.label = "bar-identity-order", echo = FALSE, warning = FALSE}
+```
+]
+.panel[.panel-name[Code]
+```{r bar-identity-order, fig.show = "hide", warning = FALSE}
+ggplot(starwars[1:20,], 
+       aes(x = height, 
+           y = reorder(name, height))) + #<<
   geom_bar(stat = "identity") +
-  labs(x = "Height (cm)", 
-       y = "", 
-       fill = "Homeworld", 
-       title = "Starwars character height and homeworld") +
-  theme_minimal()
+  labs(x = "Height (cm)", #<<
+       y = "", #<<
+       title = "Starwars character height") + #<<
+  theme_minimal() #<<
 ```
+]
+]
 
 ---

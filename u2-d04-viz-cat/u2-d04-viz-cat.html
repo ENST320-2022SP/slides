@@ -64,14 +64,14 @@ glimpse(loans)
 ```
 ## Rows: 10,000
 ## Columns: 8
-## $ loan_amount    [3m[38;5;246m&lt;int&gt;[39m[23m 28000, 5000, 2000, 21600, 23000, 5000, 2…
-## $ interest_rate  [3m[38;5;246m&lt;dbl&gt;[39m[23m 14.07, 12.61, 17.09, 6.72, 14.07, 6.72, …
-## $ term           [3m[38;5;246m&lt;dbl&gt;[39m[23m 60, 36, 36, 36, 36, 36, 60, 60, 36, 36, …
-## $ grade          [3m[38;5;246m&lt;ord&gt;[39m[23m C, C, D, A, C, A, C, B, C, A, C, B, C, B…
-## $ state          [3m[38;5;246m&lt;fct&gt;[39m[23m NJ, HI, WI, PA, CA, KY, MI, AZ, NV, IL, …
-## $ annual_income  [3m[38;5;246m&lt;dbl&gt;[39m[23m 90000, 40000, 40000, 30000, 35000, 34000…
-## $ homeownership  [3m[38;5;246m&lt;fct&gt;[39m[23m MORTGAGE, RENT, RENT, RENT, RENT, OWN, M…
-## $ debt_to_income [3m[38;5;246m&lt;dbl&gt;[39m[23m 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, …
+## $ loan_amount    &lt;int&gt; 28000, 5000, 2000, 21600, 23000, 5000, 2…
+## $ interest_rate  &lt;dbl&gt; 14.07, 12.61, 17.09, 6.72, 14.07, 6.72, …
+## $ term           &lt;dbl&gt; 60, 36, 36, 36, 36, 36, 60, 60, 36, 36, …
+## $ grade          &lt;ord&gt; C, C, D, A, C, A, C, B, C, A, C, B, C, B…
+## $ state          &lt;fct&gt; NJ, HI, WI, PA, CA, KY, MI, AZ, NV, IL, …
+## $ annual_income  &lt;dbl&gt; 90000, 40000, 40000, 30000, 35000, 34000…
+## $ homeownership  &lt;fct&gt; MORTGAGE, RENT, RENT, RENT, RENT, OWN, M…
+## $ debt_to_income &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, …
 ```
 
 ---
@@ -195,56 +195,60 @@ ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) +
 
 ---
 
-## Bar plots with numeric and categorical data
-The starwars dataset illustrates this better.
-This is useful when you have one observation per categorical variable, or if you have calculated a summary statistic for each level of a categorical variable.
-Use `stat = "identity"` in the `geom_bar()` function
+## Use use `stat = "identity"` to plot values instead of counts
 
-```r
-ggplot(starwars[1:10,] , aes(x = name, y = height)) +
-  geom_bar(stat = "identity")
-```
-
+.panelset[
+.panel[.panel-name[Plot]
 &lt;img src="u2-d04-viz-cat_files/figure-html/unnamed-chunk-11-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+.panel[.panel-name[Code]
+
+```r
+ggplot(starwars[1:20,], aes(x = name, y = height)) +
+* geom_bar(stat = "identity")
+```
+]
+]
 
 ---
 
-## Bar plots with numeric and categorical data
-Not very pretty - plot name on the y-axis
+## Plot `name` on the y-axis for better viz
+.panelset[
+.panel[.panel-name[Plot]
+&lt;img src="u2-d04-viz-cat_files/figure-html/unnamed-chunk-12-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+.panel[.panel-name[Code]
 
 ```r
-ggplot(starwars[1:40,], aes(x = height, y = name)) +
+ggplot(starwars[1:20,], 
+       aes(x = height, 
+*          y = name)) +
   geom_bar(stat = "identity")
 ```
-
-```
-## Warning: Removed 1 rows containing missing values
-## (position_stack).
-```
-
-&lt;img src="u2-d04-viz-cat_files/figure-html/unnamed-chunk-12-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+]
 
 ---
 
-## Bar plots with numeric and categorical data
-Not very pretty - reorder name by height. And let's color the bars by homeworld, make the labels nicer, and use a nicer theme while we're at it.
+### Reorder `name` by `height` for even better viz (and clean up labels and theme)
+.panelset[
+.panel[.panel-name[Plot]
+&lt;img src="u2-d04-viz-cat_files/figure-html/unnamed-chunk-13-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+.panel[.panel-name[Code]
 
 ```r
-ggplot(starwars[1:40,], aes(x = height, y = reorder(name, height), fill = homeworld)) +
+ggplot(starwars[1:20,], 
+       aes(x = height, 
+*          y = reorder(name, height))) +
   geom_bar(stat = "identity") +
-  labs(x = "Height (cm)", 
-       y = "", 
-       fill = "Homeworld", 
-       title = "Starwars character height and homeworld") +
-  theme_minimal()
+* labs(x = "Height (cm)",
+*      y = "",
+*      title = "Starwars character height") +
+* theme_minimal()
 ```
-
-```
-## Warning: Removed 1 rows containing missing values
-## (position_stack).
-```
-
-&lt;img src="u2-d04-viz-cat_files/figure-html/unnamed-chunk-13-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+]
 
 ---
     </textarea>
