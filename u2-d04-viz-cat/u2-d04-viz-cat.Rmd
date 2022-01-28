@@ -214,3 +214,11 @@ ggplot(starwars[1:20,],
 ]
 
 ---
+
+## If you finish the application exercise early...
+
+- Explore other [ggplot geoms](https://ivelasq.rbind.io/blog/other-geoms/?utm_source=pocket_mylist)!
+- Explore different [ggplot theme packages](https://towardsdatascience.com/themes-to-spice-up-visualizations-with-ggplot2-3e275038dafa)! 
+- Explore different [color palette packages](https://github.com/EmilHvitfeldt/r-color-palettes)!
+
+---
