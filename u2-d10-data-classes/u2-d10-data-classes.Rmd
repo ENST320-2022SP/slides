@@ -1,7 +1,7 @@
 ---
 title: "Data classes"
-subtitle: "<br><br> Data Science in a Box"
-author: "[datasciencebox.org](https://datasciencebox.org/)"
+subtitle: "<br><br> ENST 320 Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app/)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
