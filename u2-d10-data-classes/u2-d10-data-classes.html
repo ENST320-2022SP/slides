@@ -3,8 +3,7 @@
   <head>
     <title>Data classes</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Data classes
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> ENST 320 Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -306,7 +305,7 @@ ggplot(cat_lovers, mapping = aes(x = handedness)) +
   geom_bar()
 ```
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-15-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-15-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -320,7 +319,7 @@ cat_lovers %&gt;%
   geom_bar()
 ```
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-16-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-16-1.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -351,7 +350,7 @@ cat_lovers %&gt;%
 ]
 ]
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-18-1.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -392,7 +391,7 @@ hotels %&gt;%
 ```
 
 ```
-## # A tibble: 119,390 x 4
+## # A tibble: 119,390 × 4
 ##   arrival_date_year arrival_date_month arrival_date_week_number
 ##               &lt;dbl&gt; &lt;chr&gt;                                 &lt;dbl&gt;
 ## 1              2015 July                                     27
@@ -422,7 +421,7 @@ hotels %&gt;%
 ```
 
 ```
-## # A tibble: 119,390 x 33
+## # A tibble: 119,390 × 33
 ##   arrival_date hotel       is_canceled lead_time arrival_date_ye…
 ##   &lt;glue&gt;       &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 2015 July 1  Resort Hot…           0       342             2015
@@ -446,7 +445,7 @@ hotels %&gt;%
 ```
 
 ```
-## # A tibble: 793 x 2
+## # A tibble: 793 × 2
 ##   arrival_date       n
 ##   &lt;glue&gt;         &lt;int&gt;
 ## 1 2015 August 1    110
@@ -473,7 +472,7 @@ hotels %&gt;%
   geom_line()
 ```
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-23-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -485,7 +484,7 @@ Why does the plot start with August when we know our data start in July? And why
 ]
 
 .midi[
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-24-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-24-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -505,7 +504,7 @@ hotels %&gt;%
 ```
 
 ```
-## # A tibble: 119,390 x 33
+## # A tibble: 119,390 × 33
 ##   arrival_date hotel       is_canceled lead_time arrival_date_ye…
 ##   &lt;date&gt;       &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 2015-07-01   Resort Hot…           0       342             2015
@@ -529,7 +528,7 @@ hotels %&gt;%
 ```
 
 ```
-## # A tibble: 793 x 2
+## # A tibble: 793 × 2
 ##   arrival_date     n
 ##   &lt;date&gt;       &lt;int&gt;
 ## 1 2015-07-01     122
@@ -556,7 +555,7 @@ hotels %&gt;%
   geom_line()
 ```
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-27-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-27-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -573,7 +572,7 @@ hotels %&gt;%
 * geom_smooth()
 ```
 
-&lt;img src="u2-d11-data-classes_files/figure-html/unnamed-chunk-28-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d10-data-classes_files/figure-html/unnamed-chunk-28-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
