@@ -1,7 +1,7 @@
 ---
 title: "Importing data"
-subtitle: "<br><br> Data Science in a Box"
-author: "[datasciencebox.org](https://datasciencebox.org/)"
+subtitle: "<br><br> Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app/)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
@@ -136,7 +136,7 @@ names(edibnb_badnames)
 
 --
 
-... but R doesn't allow spaces in variable names
+... R doesn't allow spaces in variable names
 
 ```{r error=TRUE}
 ggplot(edibnb_badnames, aes(x = Number of bathrooms, y = Price)) +
@@ -145,7 +145,7 @@ ggplot(edibnb_badnames, aes(x = Number of bathrooms, y = Price)) +
 
 ---
 
-## Option 1 - Define column names
+## Option 1 - You define the column names when you read in the data
 
 .small[
 ```{r}
@@ -162,7 +162,7 @@ names(edibnb_col_names)
 
 ---
 
-## Option 2 - Format text to snake_case
+## Option 2 - Format text to snake_case using the `clean_names` function
 
 ```{r warning=FALSE}
 edibnb_clean_names <- read_csv("data/edibnb-badnames.csv") %>%
@@ -261,15 +261,6 @@ read_csv("data/df-na.csv", col_types = list(col_double(),
 
 ---
 
-.question[
-Wondering where you remember these from?
-]
-
-```{r message=TRUE, output.lines=7}
-read_csv("data/df-na.csv")
-```
-
----
 
 class:middle
 
