@@ -106,7 +106,7 @@ read_csv("data/df.csv")
 .your-turn[
 ### .hand[Your turn!]
 
-- RStudio Cloud > `AE 06 - Nobels and sales + Data import` > open `nobels-csv.Rmd` and knit.
+- RStudio Cloud > `AE 09 - Nobels and sales + Data import` > open `nobels-csv.Rmd` and knit.
 - Read in the `nobels.csv` file from the `data-raw/` folder.
 - Split into two (STEM and non-STEM): 
   - Create a new data frame, `nobel_stem`, that filters for the STEM fields 
@@ -458,7 +458,7 @@ class: middle
 .your-turn[
 ### .hand[Your turn!]
 .midi[
-- RStudio Cloud > `AE 06 - Nobels and sales + Data import` > `sales-excel.Rmd`. 
+- RStudio Cloud > `AE 09 - Nobels and sales + Data import` > `sales-excel.Rmd`. 
 - Load the `sales.xlsx` file from the `data-raw/` folder, using appropriate arguments for the `read_excel()` function such that it looks like the output on the left.
 - **Stretch goal:** Manipulate the sales data such that it looks like the output on the right.
 ]
