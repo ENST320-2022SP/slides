@@ -3,8 +3,7 @@
   <head>
     <title>Recoding data</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Recoding data
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -63,14 +62,14 @@ rel_inc &lt;- read_excel("data/relig-income.xlsx")
 .small[
 
 ```
-## # A tibble: 12 x 6
-##   `Religious tradition`      `Less than $30,000` `$30,000-$49,99…
+## # A tibble: 12 × 6
+##   `Religious tradition`         `Less than $30,… `$30,000-$49,99…
 ##   &lt;chr&gt;                                    &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 Buddhist                                  0.36             0.18
 ## 2 Catholic                                  0.36             0.19
 ## 3 Evangelical Protestant                    0.35             0.22
 ## 4 Hindu                                     0.17             0.13
-## 5 Historically Black Protes…                0.53             0.22
+## 5 Historically Black Protestant             0.53             0.22
 ## 6 Jehovah's Witness                         0.48             0.25
 ## # … with 6 more rows, and 3 more variables:
 ## #   $50,000-$99,999 &lt;dbl&gt;, $100,000 or more &lt;dbl&gt;,
@@ -93,7 +92,7 @@ rel_inc %&gt;%
 ```
 
 ```
-## # A tibble: 12 x 6
+## # A tibble: 12 × 6
 ##   religion     `Less than $30,… `$30,000-$49,99… `$50,000-$99,99…
 ##   &lt;chr&gt;                   &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 Buddhist                 0.36             0.18             0.32
@@ -115,7 +114,7 @@ If we want a new variable called `income` with levels such as "Less than $30,000
 
 
 ```
-## # A tibble: 48 x 4
+## # A tibble: 48 × 4
 ##    religion                   n income            proportion
 ##    &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;
 ##  1 Buddhist                 233 Less than $30,000       0.36
@@ -156,7 +155,7 @@ rel_inc %&gt;%
 ```
 
 ```
-## # A tibble: 48 x 4
+## # A tibble: 48 × 4
 ##   religion     n income            proportion
 ##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;
 ## 1 Buddhist   233 Less than $30,000       0.36
@@ -190,7 +189,7 @@ rel_inc %&gt;%
 ```
 
 ```
-## # A tibble: 48 x 5
+## # A tibble: 48 × 5
 ##   religion     n income            proportion frequency
 ##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 Buddhist   233 Less than $30,000       0.36        84
@@ -232,7 +231,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency)) +
   geom_col()
 ```
 
-&lt;img src="u2-d13-data-recode_files/figure-html/unnamed-chunk-10-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/unnamed-chunk-10-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -254,7 +253,7 @@ rel_inc_long &lt;- rel_inc_long %&gt;%
 ]
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/unnamed-chunk-12-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/unnamed-chunk-12-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 ]
@@ -274,7 +273,7 @@ rel_inc_long &lt;- rel_inc_long %&gt;%
 ]
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/unnamed-chunk-14-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/unnamed-chunk-14-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 ]
@@ -286,7 +285,7 @@ rel_inc_long &lt;- rel_inc_long %&gt;%
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/rel-income-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/rel-income-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -306,7 +305,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/rel-income-fill-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/rel-income-fill-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -326,7 +325,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/rel-income-fill-viridis-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/rel-income-fill-viridis-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -348,7 +347,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/rel-income-fill-viridis-minimal-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/rel-income-fill-viridis-minimal-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -370,7 +369,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/bottom-legend-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/bottom-legend-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -393,7 +392,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/unnamed-chunk-20-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/unnamed-chunk-20-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
@@ -417,7 +416,7 @@ ggplot(rel_inc_long, aes(y = religion, x = frequency, fill = income)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-&lt;img src="u2-d13-data-recode_files/figure-html/unnamed-chunk-21-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="u2-d12-data-recode_files/figure-html/unnamed-chunk-21-1.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .panel[.panel-name[Code]
