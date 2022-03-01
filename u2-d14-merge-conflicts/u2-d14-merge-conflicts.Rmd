@@ -1,11 +1,11 @@
 ---
-title: "AE-12 Merge Conflicts"
+title: "Resolving merge conflicts"
 author: "Cassie Gurbisz"
 date: "3/1/2022"
 output: html_document
 ---
 
-# Learning goal
+## Learning goal
 
 This exercise is designed to demonstrate how to resolve merge conflicts in GitHub. 
 
@@ -71,7 +71,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 - Everyone else should now pull Student 1's changes.
 
 
-### Harder to fix merge conflict
+### 4. Harder to fix merge conflict
 
 - Student 1: Make some changes to a line in your .Rmd file. Save, stage, commit, and push.
 - Student 2: **Without first pulling**, make a different change to **the same line** of the .Rmd file. Save, stage, commit, and push. You will get the same error message as above. Click "Pull." You should get another error message:
@@ -98,7 +98,7 @@ Student 1's work
 - Student 1 (and 3) should now click pull to pull the resolved version of the file into their local workspace.
 
 
-### Follow these instructions carefully
+### Conclusion: Follow these instructions carefully and always pull first
 
 Git is very picky about the order in which follow the steps above. If you miss one step (like forgetting to check the stage box) or if you are many steps in front of or behind the remote repository, conflicts become more difficult to merge and they may need to be resolved by command line in the Terminal. We want to avoid this. The morals of the story are:
 
