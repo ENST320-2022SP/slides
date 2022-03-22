@@ -3,8 +3,7 @@
   <head>
     <title>Functions</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Functions
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> ENST 320: Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -44,17 +43,17 @@ class: middle
 
 ---
 
-## 🏁 Start with
+## 🏁 What we are starting with
 
 &lt;img src="img/fm-speeches.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## End with 🛑
+## What we want to end with 🛑
 
 
 ```
-## # A tibble: 141 x 6
+## # A tibble: 141 × 6
 ##    title      date       location   abstract      text  url      
 ##    &lt;chr&gt;      &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;         &lt;lis&gt; &lt;chr&gt;    
 ##  1 Coronavir… 2020-10-26 St Andrew… Statement gi… &lt;chr… https://…
@@ -90,21 +89,21 @@ class: middle
 
 ---
 
-## Plan
+## The plan
 
-1. Scrape `title`, `date`, `location`, `abstract`, and `text` from a few COVID-19 speech pages to develop the code
+1. Scrape `title`, `date`, `location`, `abstract`, and `text` from a few COVID-19 speech pages
 
-2. Write a function that scrapes `title`, `date`, `location`, `abstract`, and `text` from COVID-19 speech pages
+2. Write a function that scrapes `title`, `date`, `location`, `abstract`, and `text` from each of the COVID-19 speech pages
 
 3. Scrape the `url`s of COVID-19 speeches from the main page
 
-4. Use this function to scrape from each individual COVID-19 speech from these `url`s and create a data frame with the columns `title`, `date`, `location`, `abstract`, `text`, and `url`
+4. Use our new function to scrape from each individual COVID-19 speech with these `url`s as inputs and create a data frame with the columns `title`, `date`, `location`, `abstract`, `text`, and `url`
 
 ---
 
 class: middle
 
-# Scrape data from a few COVID-19 speech pages
+# 1. Scrape data from a few COVID-19 speech pages
 
 ---
 
@@ -290,7 +289,7 @@ oct_26_speech
 ```
 
 ```
-## # A tibble: 1 x 6
+## # A tibble: 1 × 6
 ##   title       date       location   abstract     text  url       
 ##   &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;        &lt;lis&gt; &lt;chr&gt;     
 ## 1 Coronaviru… 2020-10-26 St Andrew… Statement g… &lt;chr… https://w…
@@ -373,7 +372,7 @@ oct_23_speech
 ```
 
 ```
-## # A tibble: 1 x 6
+## # A tibble: 1 × 6
 ##   title       date       location   abstract     text  url       
 ##   &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;        &lt;lis&gt; &lt;chr&gt;     
 ## 1 Coronaviru… 2020-10-23 St Andrew… Statement g… &lt;chr… https://w…
@@ -591,8 +590,8 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
 ## $ date     &lt;date&gt; 2020-10-26
 ## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
-## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
-## $ text     &lt;list&gt; &lt;"\nGood afternoon, and thanks for joining us.…
+## $ abstract &lt;chr&gt; NA
+## $ text     &lt;list&gt; &lt;"\nGood afternoon, and thanks for joining us…
 ## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
@@ -612,8 +611,8 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
 ## $ date     &lt;date&gt; 2020-10-23
 ## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
-## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
-## $ text     &lt;list&gt; &lt;"\nGood afternoon everyone. Thank you very mu…
+## $ abstract &lt;chr&gt; NA
+## $ text     &lt;list&gt; &lt;"\nGood afternoon everyone. Thank you very m…
 ## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
@@ -633,8 +632,8 @@ scrape_speech(url = "https://www.gov.scot/publications/coronavirus-covid-19-upda
 ## $ title    &lt;chr&gt; "Coronavirus (COVID-19) update: First Minister…
 ## $ date     &lt;date&gt; 2020-10-22
 ## $ location &lt;chr&gt; "St Andrew's House, Edinburgh"
-## $ abstract &lt;chr&gt; "Statement given by First Minister Nicola Stu…
-## $ text     &lt;list&gt; &lt;"\nGood afternoon, let me start as usual with…
+## $ abstract &lt;chr&gt; NA
+## $ text     &lt;list&gt; &lt;"\nGood afternoon, let me start as usual wit…
 ## $ url      &lt;chr&gt; "https://www.gov.scot/publications/coronavirus…
 ```
 
