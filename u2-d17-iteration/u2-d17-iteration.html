@@ -3,8 +3,7 @@
   <head>
     <title>Iteration</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Iteration
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -54,7 +53,7 @@ class: middle
 
 
 ```
-## # A tibble: 141 x 6
+## # A tibble: 141 × 6
 ##    title      date       location   abstract      text  url      
 ##    &lt;chr&gt;      &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;         &lt;lis&gt; &lt;chr&gt;    
 ##  1 Coronavir… 2020-10-26 St Andrew… Statement gi… &lt;chr… https://…
@@ -130,10 +129,10 @@ scrape_speech(url = url_26_oct)
 ```
 
 ```
-## # A tibble: 1 x 6
-##   title       date       location   abstract     text  url       
-##   &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;        &lt;lis&gt; &lt;chr&gt;     
-## 1 Coronaviru… 2020-10-26 St Andrew… Statement g… &lt;chr… https://w…
+## # A tibble: 1 × 6
+##   title        date       location    abstract text   url        
+##   &lt;chr&gt;        &lt;date&gt;     &lt;chr&gt;       &lt;chr&gt;    &lt;list&gt; &lt;chr&gt;      
+## 1 Coronavirus… 2020-10-26 St Andrew'… &lt;NA&gt;     &lt;chr … https://ww…
 ```
 
 ```r
@@ -142,10 +141,10 @@ scrape_speech(url = url_23_oct)
 ```
 
 ```
-## # A tibble: 1 x 6
-##   title       date       location   abstract     text  url       
-##   &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;        &lt;lis&gt; &lt;chr&gt;     
-## 1 Coronaviru… 2020-10-23 St Andrew… Statement g… &lt;chr… https://w…
+## # A tibble: 1 × 6
+##   title        date       location    abstract text   url        
+##   &lt;chr&gt;        &lt;date&gt;     &lt;chr&gt;       &lt;chr&gt;    &lt;list&gt; &lt;chr&gt;      
+## 1 Coronavirus… 2020-10-23 St Andrew'… &lt;NA&gt;     &lt;chr … https://ww…
 ```
 
 ---
@@ -179,16 +178,16 @@ all_speeches_page %&gt;%
 ```
 
 ```
-##   [1] "/publications/coronavirus-covid-19-update-first-ministers-statement-24-march-2021/"                  
-##   [2] "/publications/coronavirus-covid-19-update-first-ministers-statement-23-march-2021/"                  
-##   [3] "/publications/coronavirus-covid-19-update-first-ministers-statement-18-march-2021/"                  
-##   [4] "/publications/coronavirus-covid-19-update-first-ministers-statement-17-march-2021/"                  
-##   [5] "/publications/coronavirus-covid-19-update-march-16-2021/"                                            
-##   [6] "/publications/coronavirus-covid-19-update-first-ministers-statement-15-march-2021/"                  
-##   [7] "/publications/coronavirus-covid-19-update-first-ministers-statement-11-march-2021/"                  
-##   [8] "/publications/coronavirus-covid-19-update-first-ministers-statement-9-march-2021/"                   
-##   [9] "/publications/race-zero-event-first-ministers-speech/"                                               
-##  [10] "/publications/coronavirus-covid-19-update-first-ministers-statement-5-march-2021/"                   
+##   [1] "/publications/ukraine-update-first-ministers-statement-16-march-2022/"                               
+##   [2] "/publications/fm-statement-parliament-march-15-2022/"                                                
+##   [3] "/publications/international-womens-day-2022-first-ministers-statement-8-march-2022/"                 
+##   [4] "/publications/solidarity-ukraine-debate-first-ministers-statement/"                                  
+##   [5] "/publications/cosla-conference-2022-first-ministers-speech/"                                         
+##   [6] "/publications/coronavirus-covid-19-update-first-ministers-speech-tuesday-22-february-2022/"          
+##   [7] "/publications/coronavirus-covid-19-update-first-ministers-statement-8-february-2022/"                
+##   [8] "/publications/coronavirus-covid-19-update-first-ministers-statement-1-february-2022/"                
+##   [9] "/publications/coronavirus-covid-19-update-first-ministers-statement-25-january-2022/"                
+##  [10] "/publications/coronavirus-covid-19-update-first-ministers-statement-18-january-2022/"                
 ...
 ```
 
@@ -205,16 +204,16 @@ all_speeches_page %&gt;%
 ```
 
 ```
-##   [1] "/publications/coronavirus-covid-19-update-first-ministers-statement-24-march-2021/"             
-##   [2] "/publications/coronavirus-covid-19-update-first-ministers-statement-23-march-2021/"             
-##   [3] "/publications/coronavirus-covid-19-update-first-ministers-statement-18-march-2021/"             
-##   [4] "/publications/coronavirus-covid-19-update-first-ministers-statement-17-march-2021/"             
-##   [5] "/publications/coronavirus-covid-19-update-march-16-2021/"                                       
-##   [6] "/publications/coronavirus-covid-19-update-first-ministers-statement-15-march-2021/"             
-##   [7] "/publications/coronavirus-covid-19-update-first-ministers-statement-11-march-2021/"             
-##   [8] "/publications/coronavirus-covid-19-update-first-ministers-statement-9-march-2021/"              
-##   [9] "/publications/coronavirus-covid-19-update-first-ministers-statement-5-march-2021/"              
-##  [10] "/publications/coronavirus-covid-19-update-first-ministers-statement-4-march-2021/"              
+##   [1] "/publications/coronavirus-covid-19-update-first-ministers-speech-tuesday-22-february-2022/"     
+##   [2] "/publications/coronavirus-covid-19-update-first-ministers-statement-8-february-2022/"           
+##   [3] "/publications/coronavirus-covid-19-update-first-ministers-statement-1-february-2022/"           
+##   [4] "/publications/coronavirus-covid-19-update-first-ministers-statement-25-january-2022/"           
+##   [5] "/publications/coronavirus-covid-19-update-first-ministers-statement-18-january-2022/"           
+##   [6] "/publications/coronavirus-covid-19-update-first-ministers-statement-11-january-2022/"           
+##   [7] "/publications/coronavirus-covid-19-update-first-ministers-statement-5-january-2022/"            
+##   [8] "/publications/coronavirus-covid-19-update-first-ministers-statement-21-december-2021/"          
+##   [9] "/publications/coronavirus-covid-19-update-first-ministers-speech-17-december-2021/"             
+##  [10] "/publications/coronavirus-covid-19-update-first-ministers-statement-14-december-2021/"          
 ...
 ```
 
@@ -232,16 +231,16 @@ all_speeches_page %&gt;%
 ```
 
 ```
-##   [1] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-24-march-2021/"             
-##   [2] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-23-march-2021/"             
-##   [3] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-18-march-2021/"             
-##   [4] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-17-march-2021/"             
-##   [5] "https://www.gov.scot/publications/coronavirus-covid-19-update-march-16-2021/"                                       
-##   [6] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-15-march-2021/"             
-##   [7] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-11-march-2021/"             
-##   [8] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-9-march-2021/"              
-##   [9] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-5-march-2021/"              
-##  [10] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-4-march-2021/"              
+##   [1] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-tuesday-22-february-2022/"     
+##   [2] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-8-february-2022/"           
+##   [3] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-1-february-2022/"           
+##   [4] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-25-january-2022/"           
+##   [5] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-18-january-2022/"           
+##   [6] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-11-january-2022/"           
+##   [7] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-5-january-2022/"            
+##   [8] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-21-december-2021/"          
+##   [9] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-17-december-2021/"             
+##  [10] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-14-december-2021/"          
 ...
 ```
 
@@ -261,16 +260,16 @@ covid_speech_urls
 ```
 
 ```
-##   [1] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-24-march-2021/"             
-##   [2] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-23-march-2021/"             
-##   [3] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-18-march-2021/"             
-##   [4] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-17-march-2021/"             
-##   [5] "https://www.gov.scot/publications/coronavirus-covid-19-update-march-16-2021/"                                       
-##   [6] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-15-march-2021/"             
-##   [7] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-11-march-2021/"             
-##   [8] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-9-march-2021/"              
-##   [9] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-5-march-2021/"              
-##  [10] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-4-march-2021/"              
+##   [1] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-tuesday-22-february-2022/"     
+##   [2] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-8-february-2022/"           
+##   [3] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-1-february-2022/"           
+##   [4] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-25-january-2022/"           
+##   [5] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-18-january-2022/"           
+##   [6] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-11-january-2022/"           
+##   [7] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-5-january-2022/"            
+##   [8] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-21-december-2021/"          
+##   [9] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-17-december-2021/"             
+##  [10] "https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-statement-14-december-2021/"          
 ...
 ```
 
@@ -408,7 +407,7 @@ covid_speeches %&gt;%
 ```
 
 ```
-## # A tibble: 141 x 6
+## # A tibble: 141 × 6
 ##    title      date       location   abstract      text  url      
 ##    &lt;chr&gt;      &lt;date&gt;     &lt;chr&gt;      &lt;chr&gt;         &lt;lis&gt; &lt;chr&gt;    
 ##  1 Coronavir… 2020-10-26 St Andrew… Statement gi… &lt;chr… https://…
