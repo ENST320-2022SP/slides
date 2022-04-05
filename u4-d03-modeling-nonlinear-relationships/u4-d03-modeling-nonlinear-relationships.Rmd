@@ -1,7 +1,7 @@
 ---
 title: "Modeling non-linear relationships"
-subtitle: "<br><br> Data Science in a Box"
-author: "[datasciencebox.org](https://datasciencebox.org/)"
+subtitle: "<br><br> Environmental Data Science"
+author: "[https://enst320-2022sp.netlify.app/](https://enst320-2022sp.netlify.app//)"
 output:
   xaringan::moon_reader:
     css: ["../xaringan-themer.css", "../slides.css"]
@@ -471,7 +471,7 @@ useful when the response variable is counts.
 
 - Data transformations may also be useful when the relationship is non-linear
 - However in those cases a polynomial regression may be more appropriate
-  + This is beyond the scope of this course, but you’re welcomed to try it for your final project, and I’d be happy to provide further guidance
+  + This is beyond the scope of this course, but you’re welcomed to try it for your final project
 
 ---
 

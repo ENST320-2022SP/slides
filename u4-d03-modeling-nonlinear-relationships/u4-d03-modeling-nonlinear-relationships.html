@@ -3,8 +3,7 @@
   <head>
     <title>Modeling non-linear relationships</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Modeling non-linear relationships
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app//">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -92,7 +91,7 @@ ht_wt_fit_aug
 ```
 
 ```
-## # A tibble: 3,135 x 9
+## # A tibble: 3,135 × 9
 ##    .rownames Height_in Width_in .fitted  .resid     .hat .sigma
 ##    &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 ##  1 1                37     29.5   26.7  10.3    0.000399   8.30
@@ -299,10 +298,10 @@ linear_reg() %&gt;%
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic  p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept)   4.67     0.0585      79.9  0.      
+## 1 (Intercept)   4.67     0.0585      79.9  0       
 ## 2 Width_in      0.0192   0.00226      8.48 3.36e-17
 ```
 
@@ -396,7 +395,7 @@ useful when the response variable is counts.
 
 - Data transformations may also be useful when the relationship is non-linear
 - However in those cases a polynomial regression may be more appropriate
-  + This is beyond the scope of this course, but you’re welcomed to try it for your final project, and I’d be happy to provide further guidance
+  + This is beyond the scope of this course, but you’re welcomed to try it for your final project
 
 ---
 
