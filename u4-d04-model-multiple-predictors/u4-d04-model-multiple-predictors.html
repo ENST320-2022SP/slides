@@ -3,8 +3,7 @@
   <head>
     <title>Models with multiple predictors</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -17,8 +16,8 @@
 class: center, middle, inverse, title-slide
 
 # Models with multiple predictors
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -30,7 +29,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -57,7 +56,7 @@ The `allbacks` data frame gives measurements on the volume and weight of 15 book
 .small[
 
 ```
-## # A tibble: 15 x 4
+## # A tibble: 15 × 4
 ##    volume  area weight cover
 ##     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt;
 ##  1    885   382    800 hb   
@@ -99,7 +98,7 @@ linear_reg() %&gt;%
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic    p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
 ## 1 (Intercept)  108.      88.4         1.22 0.245     
@@ -124,7 +123,7 @@ linear_reg() %&gt;%
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term        estimate std.error statistic      p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;
 ## 1 (Intercept)  198.      59.2         3.34 0.00584     
@@ -142,7 +141,7 @@ linear_reg() %&gt;%
 
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term        estimate std.error statistic      p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;
 ## 1 (Intercept)  198.      59.2         3.34 0.00584     
