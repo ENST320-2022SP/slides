@@ -3,8 +3,7 @@
   <head>
     <title>More models with multiple predictors</title>
     <meta charset="utf-8" />
-    <meta name="author" content="datasciencebox.org" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
+    <meta name="author" content="https://enst320-2022sp.netlify.app/" />
     <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -20,8 +19,8 @@
 class: center, middle, inverse, title-slide
 
 # More models with multiple predictors
-## <br><br> Data Science in a Box
-### <a href="https://datasciencebox.org/">datasciencebox.org</a>
+## <br><br> Environmental Data Science
+### <a href="https://enst320-2022sp.netlify.app/">https://enst320-2022sp.netlify.app/</a>
 
 ---
 
@@ -33,7 +32,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;
 &lt;span&gt;
-&lt;a href="https://datasciencebox.org" target="_blank"&gt;datasciencebox.org&lt;/a&gt;
+&lt;a href="https://enst320-2022sp.netlify.app" target="_blank"&gt;ENST 320: Environmental Data Science&lt;/a&gt;
 &lt;/span&gt;
 &lt;/div&gt; 
 
@@ -74,10 +73,10 @@ tidy(pp_fit)
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term        estimate std.error statistic  p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept)   4.77     0.0579      82.4  0.      
+## 1 (Intercept)   4.77     0.0579      82.4  0       
 ## 2 Width_in      0.0269   0.00373      7.22 6.58e-13
 ## 3 Height_in    -0.0133   0.00395     -3.36 7.93e- 4
 ```
@@ -88,10 +87,10 @@ tidy(pp_fit)
 
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term        estimate std.error statistic  p.value
 ##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept)   4.77     0.0579      82.4  0.      
+## 1 (Intercept)   4.77     0.0579      82.4  0       
 ## 2 Width_in      0.0269   0.00373      7.22 6.58e-13
 ## 3 Height_in    -0.0133   0.00395     -3.36 7.93e- 4
 ```
@@ -107,8 +106,8 @@ tidy(pp_fit)
 .panelset[
 .panel[.panel-name[Plot]
 .pull-left-wide[
-<div id="htmlwidget-e314a9658508aa12f815" style="width:100%;height:1483.2px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e314a9658508aa12f815">{"x":{"url":"u4-d05-more-model-multiple-predictors_files/figure-html//widgets/widget_plotly-plot.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8f836166d559454ecd73" style="width:100%;height:1483.2px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8f836166d559454ecd73">{"x":{"url":"u4-d05-more-model-multiple-predictors_files/figure-html//widgets/widget_plotly-plot.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel[.panel-name[Code]
@@ -156,7 +155,7 @@ pp %&gt;%
 ```
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   artistliving     n
 ##   &lt;chr&gt;        &lt;int&gt;
 ## 1 Deceased      2937
@@ -188,6 +187,11 @@ ggplot(data = pp, aes(x = Surface, fill = artistliving)) +
   labs(x = "Surface area", y = NULL) +
   geom_vline(xintercept = 1000) +
   geom_vline(xintercept = 5000, linetype = "dashed", color = "gray")
+```
+
+```
+## Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use
+## `guides(&lt;scale&gt; = "none")` instead.
 ```
 
 ```
@@ -292,10 +296,10 @@ tidy(pp_main_fit)
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term               estimate std.error statistic  p.value
 ##   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-## 1 (Intercept)        4.88     0.0424       115.   0.      
+## 1 (Intercept)        4.88     0.0424       115.   0       
 ## 2 Surface            0.000265 0.0000415      6.39 1.85e-10
 ## 3 artistlivingLiving 0.137    0.0970         1.41 1.57e- 1
 ```
@@ -347,7 +351,7 @@ tidy(pp_main_fit) %&gt;%
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   term               estimate exp_estimate
 ##   &lt;chr&gt;                 &lt;dbl&gt;        &lt;dbl&gt;
 ## 1 (Intercept)        4.88           132.  
@@ -397,13 +401,13 @@ tidy(pp_int_fit)
 ```
 
 ```
-## # A tibble: 4 x 5
-##   term                     estimate std.error statistic   p.value
-##   &lt;chr&gt;                       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-## 1 (Intercept)              4.91     0.0432       114.     0.     
-## 2 Surface                  0.000206 0.0000442      4.65   3.37e-6
-## 3 artistlivingLiving      -0.126    0.119         -1.06   2.89e-1
-## 4 Surface:artistlivingLi…  0.000479 0.000126       3.81   1.39e-4
+## # A tibble: 4 × 5
+##   term                       estimate std.error statistic p.value
+##   &lt;chr&gt;                         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 (Intercept)                 4.91e+0 0.0432       114.   0      
+## 2 Surface                     2.06e-4 0.0000442      4.65 3.37e-6
+## 3 artistlivingLiving         -1.26e-1 0.119         -1.06 2.89e-1
+## 4 Surface:artistlivingLiving  4.79e-4 0.000126       3.81 1.39e-4
 ```
 ]
 
@@ -414,13 +418,13 @@ tidy(pp_int_fit)
 .midi[
 
 ```
-## # A tibble: 4 x 5
-##   term                     estimate std.error statistic   p.value
-##   &lt;chr&gt;                       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-## 1 (Intercept)              4.91     0.0432       114.     0.     
-## 2 Surface                  0.000206 0.0000442      4.65   3.37e-6
-## 3 artistlivingLiving      -0.126    0.119         -1.06   2.89e-1
-## 4 Surface:artistlivingLi…  0.000479 0.000126       3.81   1.39e-4
+## # A tibble: 4 × 5
+##   term                       estimate std.error statistic p.value
+##   &lt;chr&gt;                         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 (Intercept)                 4.91e+0 0.0432       114.   0      
+## 2 Surface                     2.06e-4 0.0000442      4.65 3.37e-6
+## 3 artistlivingLiving         -1.26e-1 0.119         -1.06 2.89e-1
+## 4 Surface:artistlivingLiving  4.79e-4 0.000126       3.81 1.39e-4
 ```
 ]
 
@@ -477,14 +481,6 @@ glance(pp_int_fit)$adj.r.squared
 ```
 ## [1] 0.01676753
 ```
-
----
-
-## Third order interactions
-
-- Can you? Yes
-- Should you? Probably not if you want to interpret these interactions in context
-of the data.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
